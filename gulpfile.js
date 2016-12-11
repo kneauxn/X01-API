@@ -12,7 +12,7 @@ gulp.task('default', function(){
         ignore: ['./node_modules/**']
     })
     .on('restart', function(){
-        console.log('Restarting with your new changes, hommie!');
+        console.log('Restarting with your new changes, homie!');
     });
 });
 

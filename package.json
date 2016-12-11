@@ -18,6 +18,8 @@
   "homepage": "https://github.com/kneauxn/X01-API#readme",
   "dependencies": {
     "express": "^4.14.0",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "mongoose": "^4.7.2"
   }
 }
