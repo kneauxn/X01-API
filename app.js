@@ -4,16 +4,16 @@ var app = express();
 
 var port = process.env.PORT || 3000;
 
-var bookRouter = express.Router();
+var gameRouter = express.Router();
 
-bookRouter.route('/Books')
+gameRouter.route('/Games')
     .get(function(req, res){
         var responseJson = {hello: "This is my API!!!"};
 
         res.json(responseJson);
     });
 
-app.use('/api', bookRouter);
+app.use('/api', gameRouter);
 
 
 
