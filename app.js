@@ -14,10 +14,15 @@ var gameRouter = express.Router();
 
 gameRouter.route('/Games')
     .get(function(req, res){
-        
-        var query = {};
+        Game.find(function(err, games){
+            if(err){
+                res.status(500).send(err);
+            } else {
+                res.json(games);
+            }
+        });
 
-        if(req.)
+});
 
 app.use('/api', gameRouter);
 

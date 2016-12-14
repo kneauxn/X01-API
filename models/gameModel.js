@@ -1,5 +1,5 @@
 var mongoose = require('mongoose'),
-    Schema = mongoose.Schema();
+    Schema = mongoose.Schema;
 
 var gameModel = new Schema({
     gameNumber: {type: Number},
@@ -12,4 +12,4 @@ var gameModel = new Schema({
     gameLoser: {type: String}
     });
 
-module.exports = mongoose.model('Game');
+module.exports = mongoose.model('Game', gameModel);
