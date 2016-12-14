@@ -10,9 +10,21 @@ var app = express();
 
 var port = process.env.PORT || 3000;
 
-var gameRouter = express.Router();
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
+
+var gameRouter = express.Router();
+ 
+ // Game history CRUD
 gameRouter.route('/Games')
+    .post(function(req, res){
+            var game = new Game(req.body);
+            game.save();
+            console.log(game);
+            res.send(game);
+
+        })
     .get(function(req, res){
         Game.find(function(err, games){
             if(err){
