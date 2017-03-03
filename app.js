@@ -1,6 +1,7 @@
 var express = require('express'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser');
+    cors = require('cors');
 
 var db = mongoose.connect('mongodb://localhost/gamesdb');
 
@@ -35,6 +36,8 @@ gameRouter.route('/Games')
         });
 
 });
+
+app.use(cors());
 
 app.use('/api', gameRouter);
 
