@@ -6,7 +6,9 @@ var gameModel = new Schema({
     playerOne: {type: String},
     playerTwo: {type: String},
     playerOneScore: {type: Number},
+    playerOneThrows: {type: Array},
     playerTwoScore: {type: Number},
+    playerTwoThrows: {type: Array},
     gameType: {type: String},
     gameWinner: {type: String},
     gameLoser: {type: String}

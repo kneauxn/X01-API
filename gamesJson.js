@@ -18,4 +18,4 @@ db.games.insert({
     gameWinner: "Tyler",
     gameLoser: "Jared"
     }
-])
+);
